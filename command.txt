@@ -3,3 +3,5 @@ ps aux | sort -n -k 6 | tail -n 10
 
 # CPU使用率が高いプロセスを見つける
 watch -n 2 "ps aux| sort -nk +3 | tail" or watch -n 2 "ps aux| sort -nk +4 | tail"
+
+vmstat 1 | awk '{print strftime("%y/%m/%d %H:%M:%S"), $0}'
