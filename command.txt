@@ -1,0 +1,5 @@
+# 物理メモリを多く使用しているプロセスを抽出する
+ps aux | sort -n -k 6 | tail -n 10
+
+# CPU使用率が高いプロセスを見つける
+watch -n 2 "ps aux| sort -nk +3 | tail" or watch -n 2 "ps aux| sort -nk +4 | tail"
